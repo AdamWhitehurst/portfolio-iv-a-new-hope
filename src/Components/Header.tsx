@@ -1,9 +1,11 @@
 import * as React from "react";
 import { withStyles, createStyles } from "@material-ui/core/styles";
-import Logo from "../Assets/logo.svg";
+import LogoSVG from "../assets/logo.js";
+import { Typography } from "@material-ui/core";
 
-const styles = (theme: any) =>
-  createStyles({
+const styles = (theme: any) => {
+  console.log(styles);
+  return createStyles({
     headerContainer: {
       position: "fixed",
       top: 0,
@@ -11,34 +13,54 @@ const styles = (theme: any) =>
       width: "100%",
       height: "10vh"
     },
-
     sideSection: {
+      display: "flex",
+      flexDirection: "row",
       flex: "10",
-      backgroundColor: "white",
-      borderColor: "black",
+      backgroundColor: "#3f3f40",
+      borderColor: "white",
       borderBottomWidth: "0.1rem",
-      borderBottomStyle: "solid"
+      borderBottomStyle: "solid",
+    },
+    sideLink: {
+      lineHeight: "0.6",
+      color: "white",
+      fontFamily: "Damion",
+      textAlign: "center",
+      alignSelf: "end",
+      flex: 1
+    },
+    'sideSection > Typography': {
+      color:'white',
     },
 
     middleSection: {
       flex: "4"
     },
-
-    logo: {
-      height: "100%",
-      width: "100%"
+    logoText: {
+      fill: "white"
+    },
+    logoBackground: {
+      fill: "#3f3f40"
     }
   });
+};
 
 function Header(props: any) {
   const { classes } = props;
 
   return <div className={classes.headerContainer}>
-      <div className={classes.sideSection} />
-      <div className={classes.middleSection}>
-        {Logo}
+      <div className={classes.sideSection}>
+        <Typography variant='h5' className={classes.sideLink} >About</Typography>
+        <Typography variant='h5' className={classes.sideLink} >About</Typography>
       </div>
-      <div className={classes.sideSection} />
+      <div className={classes.middleSection}>
+        <LogoSVG textStyle={classes.logoText} backgroundStyle={classes.logoBackground} />
+      </div>
+      <div className={classes.sideSection}>
+        <Typography variant='h5' className={classes.sideLink} >About</Typography>
+        <Typography variant='h5' className={classes.sideLink} >About</Typography>
+      </div>
     </div>;
 }
 

@@ -5,6 +5,7 @@
     "lib": ["es6", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
+    "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noEmit": true,
