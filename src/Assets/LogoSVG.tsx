@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from "react";
 
-const LogoSVG = (props) => {
+export const LogoSVG = (props: any) => {
   return (
   <svg
     id="logo"
@@ -26,5 +26,3 @@ const LogoSVG = (props) => {
   </svg>
 );
 }
-
-export default LogoSVG;

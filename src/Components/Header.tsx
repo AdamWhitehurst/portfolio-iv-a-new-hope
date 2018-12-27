@@ -1,6 +1,6 @@
 import * as React from "react";
 import { withStyles, createStyles } from "@material-ui/core/styles";
-import LogoSVG from "../assets/logo.js";
+import { LogoSVG } from "../assets/LogoSVG";
 import { Typography } from "@material-ui/core";
 
 const styles = (theme: any) => {
@@ -25,7 +25,7 @@ const styles = (theme: any) => {
     sideLink: {
       lineHeight: "0.6",
       color: "white",
-      fontFamily: "Damion",
+      fontFamily: "damion",
       textAlign: "center",
       alignSelf: "end",
       flex: 1

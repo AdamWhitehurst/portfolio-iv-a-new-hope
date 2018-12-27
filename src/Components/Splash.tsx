@@ -4,8 +4,18 @@ import { withStyles, createStyles } from "@material-ui/core/styles";
 const styles = (theme: any) =>
   createStyles({
     splashContainer: {
-      height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignContent: "center",
+      height: "120vh",
       width: "100%",
+      backgroundColor: "lightgrey"
+    },
+    canvas: {
+      alignSelf: "center",
+      height: '50vh',
+      width: '50vh',
       backgroundColor: "grey"
     }
   });
@@ -13,7 +23,13 @@ const styles = (theme: any) =>
 function Splash(props: any) {
   const { classes } = props;
 
-  return <div className={classes.splashContainer} />;
+  return (
+    <div className={classes.splashContainer}>
+      <div id="canvas" className= {classes.canvas}>
+      
+      </div>
+    </div>
+  );
 }
 
 export default withStyles(styles)(Splash);
