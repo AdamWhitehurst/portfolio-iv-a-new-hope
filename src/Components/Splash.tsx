@@ -1,5 +1,7 @@
 import * as React from "react";
 import { withStyles, createStyles } from "@material-ui/core/styles";
+import * as bgImage from "../assets/bg.png";
+
 
 const styles = (theme: any) =>
   createStyles({
@@ -8,15 +10,26 @@ const styles = (theme: any) =>
       flexDirection: "column",
       justifyContent: "center",
       alignContent: "center",
-      height: "120vh",
+      height: "100vh",
       width: "100%",
-      backgroundColor: "lightgrey"
+      backgroundColor: "DarkSeaGreen",
+      backgroundImage: `url(${bgImage})`,
+      backgroundRepeat: 'repeat',
     },
     canvas: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignContent: "center",
       alignSelf: "center",
+      alignItems: "center",
       height: '50vh',
       width: '50vh',
-      backgroundColor: "grey"
+      backgroundColor: "#418641",
+      borderColor: "white",
+      borderWidth: "0.2rem",
+      borderStyle: "solid",
+      filter: "drop-shadow(1px 1px 1px rgba(0,0,0,.3))",
     }
   });
 
@@ -26,7 +39,7 @@ function Splash(props: any) {
   return (
     <div className={classes.splashContainer}>
       <div id="canvas" className= {classes.canvas}>
-      
+    
       </div>
     </div>
   );

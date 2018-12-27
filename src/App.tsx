@@ -8,9 +8,8 @@ const styles = (theme: any) => createStyles({
   app: {
     display: "flex",
     width: "100%",
-    height: "50rem",
     flexGrow: 1,
-    flexDirection: "column"
+    backgroundColor: "#3f3f40",
   }
 });
 

@@ -6,5 +6,7 @@ import registerServiceWorker from "./registerServiceWorker";
 
 import "typeface-roboto";
 
+import "typeface-damion";
+
 ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
 registerServiceWorker();

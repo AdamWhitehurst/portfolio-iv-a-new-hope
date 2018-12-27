@@ -4,7 +4,6 @@ import { LogoSVG } from "../assets/LogoSVG";
 import { Typography } from "@material-ui/core";
 
 const styles = (theme: any) => {
-  console.log(styles);
   return createStyles({
     headerContainer: {
       position: "fixed",
@@ -17,31 +16,46 @@ const styles = (theme: any) => {
       display: "flex",
       flexDirection: "row",
       flex: "10",
-      backgroundColor: "#3f3f40",
+      backgroundColor: "#418641",
       borderColor: "white",
-      borderBottomWidth: "0.1rem",
+      borderBottomWidth: "0.14rem",
       borderBottomStyle: "solid",
+      filter: "drop-shadow(1px 1px 1px rgba(0,0,0,.3))",
     },
     sideLink: {
-      lineHeight: "0.6",
-      color: "white",
+      lineHeight: "0.7",
+      color:'white',
       fontFamily: "damion",
       textAlign: "center",
       alignSelf: "end",
-      flex: 1
     },
-    'sideSection > Typography': {
-      color:'white',
+
+    leftSideLink: {
+      extend: "sideLink",
+      textAlign: "end",
+      flex: 10,
+    },
+
+    middleSideLink: {
+      extend: "sideLink",
+      flex: 1,
+    },
+
+    rightSideLink: {
+      extend: "sideLink",
+      textAlign: "start",
+      flex: 10,
     },
 
     middleSection: {
-      flex: "4"
+      flex: 4,
+      filter: "drop-shadow(1px 1px 1px rgba(0,0,0,.3))",
     },
     logoText: {
       fill: "white"
     },
     logoBackground: {
-      fill: "#3f3f40"
+      fill: "#418641"
     }
   });
 };
@@ -51,15 +65,17 @@ function Header(props: any) {
 
   return <div className={classes.headerContainer}>
       <div className={classes.sideSection}>
-        <Typography variant='h5' className={classes.sideLink} >About</Typography>
-        <Typography variant='h5' className={classes.sideLink} >About</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.leftSideLink}`} >About</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.middleSideLink}`} >+</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.rightSideLink}`} >Stuff</Typography>
       </div>
       <div className={classes.middleSection}>
         <LogoSVG textStyle={classes.logoText} backgroundStyle={classes.logoBackground} />
       </div>
       <div className={classes.sideSection}>
-        <Typography variant='h5' className={classes.sideLink} >About</Typography>
-        <Typography variant='h5' className={classes.sideLink} >About</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.leftSideLink}`} >Also</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.middleSideLink}`} >+</Typography>
+        <Typography variant='h5' className={`${classes.sideLink} ${classes.rightSideLink}`} >Things.</Typography>
       </div>
     </div>;
 }

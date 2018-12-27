@@ -38,6 +38,7 @@
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.10.0",
     "tslint-react": "^3.2.0",
+    "typeface-damion": "0.0.54",
     "typeface-roboto": "0.0.54",
     "uglifyjs-webpack-plugin": "1.2.5",
     "url-loader": "0.6.2",
