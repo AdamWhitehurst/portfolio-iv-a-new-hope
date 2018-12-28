@@ -1,7 +1,7 @@
 import * as React from "react";
 import { withStyles, createStyles } from "@material-ui/core/styles";
-import * as bgImage from "../assets/bg.png";
-
+import * as bgImage from "../Assets/bg.png";
+import TFCanvas from "./TFCanvas.js";
 
 const styles = (theme: any) =>
   createStyles({
@@ -15,21 +15,6 @@ const styles = (theme: any) =>
       backgroundColor: "DarkSeaGreen",
       backgroundImage: `url(${bgImage})`,
       backgroundRepeat: 'repeat',
-    },
-    canvas: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignContent: "center",
-      alignSelf: "center",
-      alignItems: "center",
-      height: '50vh',
-      width: '50vh',
-      backgroundColor: "#418641",
-      borderColor: "white",
-      borderWidth: "0.2rem",
-      borderStyle: "solid",
-      filter: "drop-shadow(1px 1px 1px rgba(0,0,0,.3))",
     }
   });
 
@@ -38,9 +23,7 @@ function Splash(props: any) {
 
   return (
     <div className={classes.splashContainer}>
-      <div id="canvas" className= {classes.canvas}>
-    
-      </div>
+      <TFCanvas />
     </div>
   );
 }
